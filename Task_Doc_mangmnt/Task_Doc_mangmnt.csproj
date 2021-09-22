@@ -1,0 +1,729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48EA51EC-6EAD-4806-AAD9-B9209D51C75E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Task_Doc_mangmnt</RootNamespace>
+    <AssemblyName>Task_Doc_mangmnt</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.7.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.20\lib\net45\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.4.5.6\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.4.5.6\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.0\lib\net45\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.0.0\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\docs.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style.min.css" />
+    <Content Include="default.aspx" />
+    <Content Include="defaultUser.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\Simple-Line-Icons.svg" />
+    <Content Include="FrmAdminDashboard.aspx" />
+    <Content Include="frmAdminRemarks.aspx" />
+    <Content Include="frmchangepassword.aspx" />
+    <Content Include="frmCmpRegistration.aspx" />
+    <Content Include="frmforgotpswd.aspx" />
+    <Content Include="frmUserReport.aspx" />
+    <Content Include="frmprofile.aspx" />
+    <Content Include="frmTaskReport.aspx" />
+    <Content Include="frmUSerRemarks.aspx" />
+    <Content Include="frmTaskAsignMaster.aspx" />
+    <Content Include="frmTemplateMaster.aspx" />
+    <Content Include="frmUserDashboard.aspx" />
+    <Content Include="frmUserprofile.aspx" />
+    <Content Include="frmCmpReport.aspx" />
+    <Content Include="frmUserStatusReport.aspx" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\Noimage.jpg" />
+    <Content Include="logout.aspx" />
+    <Content Include="frmRegistration.aspx" />
+    <Content Include="frmRoleMaster.aspx" />
+    <Content Include="frmStatusMaster.aspx" />
+    <Content Include="frmTaskMaster.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="img\avatars\1.jpg" />
+    <Content Include="img\avatars\2.jpg" />
+    <Content Include="img\avatars\3.jpg" />
+    <Content Include="img\avatars\4.jpg" />
+    <Content Include="img\avatars\5.jpg" />
+    <Content Include="img\avatars\6.jpg" />
+    <Content Include="img\avatars\7.jpg" />
+    <Content Include="img\avatars\8.jpg" />
+    <Content Include="img\flags\Afghanistan.png" />
+    <Content Include="img\flags\African Union.png" />
+    <Content Include="img\flags\Albania.png" />
+    <Content Include="img\flags\Algeria.png" />
+    <Content Include="img\flags\American Samoa.png" />
+    <Content Include="img\flags\Andorra.png" />
+    <Content Include="img\flags\Angola.png" />
+    <Content Include="img\flags\Anguilla.png" />
+    <Content Include="img\flags\Antarctica.png" />
+    <Content Include="img\flags\Antigua &amp; Barbuda.png" />
+    <Content Include="img\flags\Arab League.png" />
+    <Content Include="img\flags\Argentina.png" />
+    <Content Include="img\flags\Armenia.png" />
+    <Content Include="img\flags\Aruba.png" />
+    <Content Include="img\flags\ASEAN.png" />
+    <Content Include="img\flags\Australia.png" />
+    <Content Include="img\flags\Austria.png" />
+    <Content Include="img\flags\Azerbaijan.png" />
+    <Content Include="img\flags\Bahamas.png" />
+    <Content Include="img\flags\Bahrain.png" />
+    <Content Include="img\flags\Bangladesh.png" />
+    <Content Include="img\flags\Barbados.png" />
+    <Content Include="img\flags\Belarus.png" />
+    <Content Include="img\flags\Belgium.png" />
+    <Content Include="img\flags\Belize.png" />
+    <Content Include="img\flags\Benin.png" />
+    <Content Include="img\flags\Bermuda.png" />
+    <Content Include="img\flags\Bhutan.png" />
+    <Content Include="img\flags\Bolivia.png" />
+    <Content Include="img\flags\Bosnia &amp; Herzegovina.png" />
+    <Content Include="img\flags\Botswana.png" />
+    <Content Include="img\flags\Brazil.png" />
+    <Content Include="img\flags\Brunei.png" />
+    <Content Include="img\flags\Bulgaria.png" />
+    <Content Include="img\flags\Burkina Faso.png" />
+    <Content Include="img\flags\Burundi.png" />
+    <Content Include="img\flags\Cambodja.png" />
+    <Content Include="img\flags\Cameroon.png" />
+    <Content Include="img\flags\Canada.png" />
+    <Content Include="img\flags\Cape Verde.png" />
+    <Content Include="img\flags\CARICOM.png" />
+    <Content Include="img\flags\Cayman Islands.png" />
+    <Content Include="img\flags\Central African Republic.png" />
+    <Content Include="img\flags\Chad.png" />
+    <Content Include="img\flags\Chile.png" />
+    <Content Include="img\flags\China.png" />
+    <Content Include="img\flags\CIS.png" />
+    <Content Include="img\flags\Colombia.png" />
+    <Content Include="img\flags\Commonwealth.png" />
+    <Content Include="img\flags\Comoros.png" />
+    <Content Include="img\flags\Congo-Brazzaville.png" />
+    <Content Include="img\flags\Congo-Kinshasa%28Zaire%29.png" />
+    <Content Include="img\flags\Cook Islands.png" />
+    <Content Include="img\flags\Costa Rica.png" />
+    <Content Include="img\flags\Cote d%27Ivoire.png" />
+    <Content Include="img\flags\Croatia.png" />
+    <Content Include="img\flags\Cuba.png" />
+    <Content Include="img\flags\Cyprus.png" />
+    <Content Include="img\flags\Czech Republic.png" />
+    <Content Include="img\flags\Denmark.png" />
+    <Content Include="img\flags\Djibouti.png" />
+    <Content Include="img\flags\Dominica.png" />
+    <Content Include="img\flags\Dominican Republic.png" />
+    <Content Include="img\flags\Ecuador.png" />
+    <Content Include="img\flags\Egypt.png" />
+    <Content Include="img\flags\El Salvador.png" />
+    <Content Include="img\flags\England.png" />
+    <Content Include="img\flags\Equatorial Guinea.png" />
+    <Content Include="img\flags\Eritrea.png" />
+    <Content Include="img\flags\Estonia.png" />
+    <Content Include="img\flags\Ethiopia.png" />
+    <Content Include="img\flags\European Union.png" />
+    <Content Include="img\flags\Faroes.png" />
+    <Content Include="img\flags\Fiji.png" />
+    <Content Include="img\flags\Finland.png" />
+    <Content Include="img\flags\France.png" />
+    <Content Include="img\flags\Gabon.png" />
+    <Content Include="img\flags\Gambia.png" />
+    <Content Include="img\flags\Georgia.png" />
+    <Content Include="img\flags\Germany.png" />
+    <Content Include="img\flags\Ghana.png" />
+    <Content Include="img\flags\Gibraltar.png" />
+    <Content Include="img\flags\Greece.png" />
+    <Content Include="img\flags\Greenland.png" />
+    <Content Include="img\flags\Grenada.png" />
+    <Content Include="img\flags\Guadeloupe.png" />
+    <Content Include="img\flags\Guam.png" />
+    <Content Include="img\flags\Guatemala.png" />
+    <Content Include="img\flags\Guernsey.png" />
+    <Content Include="img\flags\Guinea-Bissau.png" />
+    <Content Include="img\flags\Guinea.png" />
+    <Content Include="img\flags\Guyana.png" />
+    <Content Include="img\flags\Haiti.png" />
+    <Content Include="img\flags\Honduras.png" />
+    <Content Include="img\flags\Hong Kong.png" />
+    <Content Include="img\flags\Hungary.png" />
+    <Content Include="img\flags\Iceland.png" />
+    <Content Include="img\flags\India.png" />
+    <Content Include="img\flags\Indonezia.png" />
+    <Content Include="img\flags\Iran.png" />
+    <Content Include="img\flags\Iraq.png" />
+    <Content Include="img\flags\Ireland.png" />
+    <Content Include="img\flags\Islamic Conference.png" />
+    <Content Include="img\flags\Isle of Man.png" />
+    <Content Include="img\flags\Israel.png" />
+    <Content Include="img\flags\Italy.png" />
+    <Content Include="img\flags\Jamaica.png" />
+    <Content Include="img\flags\Japan.png" />
+    <Content Include="img\flags\Jersey.png" />
+    <Content Include="img\flags\Jordan.png" />
+    <Content Include="img\flags\Kazakhstan.png" />
+    <Content Include="img\flags\Kenya.png" />
+    <Content Include="img\flags\Kiribati.png" />
+    <Content Include="img\flags\Kosovo.png" />
+    <Content Include="img\flags\Kuwait.png" />
+    <Content Include="img\flags\Kyrgyzstan.png" />
+    <Content Include="img\flags\Laos.png" />
+    <Content Include="img\flags\Latvia.png" />
+    <Content Include="img\flags\Lebanon.png" />
+    <Content Include="img\flags\Lesotho.png" />
+    <Content Include="img\flags\Liberia.png" />
+    <Content Include="img\flags\Libya.png" />
+    <Content Include="img\flags\Liechtenshein.png" />
+    <Content Include="img\flags\Lithuania.png" />
+    <Content Include="img\flags\Luxembourg.png" />
+    <Content Include="img\flags\Macao.png" />
+    <Content Include="img\flags\Macedonia.png" />
+    <Content Include="img\flags\Madagascar.png" />
+    <Content Include="img\flags\Malawi.png" />
+    <Content Include="img\flags\Malaysia.png" />
+    <Content Include="img\flags\Maldives.png" />
+    <Content Include="img\flags\Mali.png" />
+    <Content Include="img\flags\Malta.png" />
+    <Content Include="img\flags\Marshall Islands.png" />
+    <Content Include="img\flags\Martinique.png" />
+    <Content Include="img\flags\Mauritania.png" />
+    <Content Include="img\flags\Mauritius.png" />
+    <Content Include="img\flags\Mexico.png" />
+    <Content Include="img\flags\Micronesia.png" />
+    <Content Include="img\flags\Moldova.png" />
+    <Content Include="img\flags\Monaco.png" />
+    <Content Include="img\flags\Mongolia.png" />
+    <Content Include="img\flags\Montenegro.png" />
+    <Content Include="img\flags\Montserrat.png" />
+    <Content Include="img\flags\Morocco.png" />
+    <Content Include="img\flags\Mozambique.png" />
+    <Content Include="img\flags\Myanmar%28Burma%29.png" />
+    <Content Include="img\flags\Namibia.png" />
+    <Content Include="img\flags\NATO.png" />
+    <Content Include="img\flags\Nauru.png" />
+    <Content Include="img\flags\Nepal.png" />
+    <Content Include="img\flags\Netherlands Antilles.png" />
+    <Content Include="img\flags\Netherlands.png" />
+    <Content Include="img\flags\New Caledonia.png" />
+    <Content Include="img\flags\New Zealand.png" />
+    <Content Include="img\flags\Nicaragua.png" />
+    <Content Include="img\flags\Niger.png" />
+    <Content Include="img\flags\Nigeria.png" />
+    <Content Include="img\flags\North Korea.png" />
+    <Content Include="img\flags\Northern Cyprus.png" />
+    <Content Include="img\flags\Northern Ireland.png" />
+    <Content Include="img\flags\Norway.png" />
+    <Content Include="img\flags\Olimpic Movement.png" />
+    <Content Include="img\flags\Oman.png" />
+    <Content Include="img\flags\OPEC.png" />
+    <Content Include="img\flags\Pakistan.png" />
+    <Content Include="img\flags\Palau.png" />
+    <Content Include="img\flags\Palestine.png" />
+    <Content Include="img\flags\Panama.png" />
+    <Content Include="img\flags\Papua New Guinea.png" />
+    <Content Include="img\flags\Paraguay.png" />
+    <Content Include="img\flags\Peru.png" />
+    <Content Include="img\flags\Philippines.png" />
+    <Content Include="img\flags\Poland.png" />
+    <Content Include="img\flags\Portugal.png" />
+    <Content Include="img\flags\Puerto Rico.png" />
+    <Content Include="img\flags\Qatar.png" />
+    <Content Include="img\flags\Red Cross.png" />
+    <Content Include="img\flags\Reunion.png" />
+    <Content Include="img\flags\Romania.png" />
+    <Content Include="img\flags\Russia.png" />
+    <Content Include="img\flags\Rwanda.png" />
+    <Content Include="img\flags\Saint Lucia.png" />
+    <Content Include="img\flags\Samoa.png" />
+    <Content Include="img\flags\San Marino.png" />
+    <Content Include="img\flags\Sao Tome &amp; Principe.png" />
+    <Content Include="img\flags\Saudi Arabia.png" />
+    <Content Include="img\flags\Scotland.png" />
+    <Content Include="img\flags\Senegal.png" />
+    <Content Include="img\flags\Serbia%28Yugoslavia%29.png" />
+    <Content Include="img\flags\Seychelles.png" />
+    <Content Include="img\flags\Sierra Leone.png" />
+    <Content Include="img\flags\Singapore.png" />
+    <Content Include="img\flags\Slovakia.png" />
+    <Content Include="img\flags\Slovenia.png" />
+    <Content Include="img\flags\Solomon Islands.png" />
+    <Content Include="img\flags\Somalia.png" />
+    <Content Include="img\flags\Somaliland.png" />
+    <Content Include="img\flags\South Africa.png" />
+    <Content Include="img\flags\South Korea.png" />
+    <Content Include="img\flags\Spain.png" />
+    <Content Include="img\flags\Sri Lanka.png" />
+    <Content Include="img\flags\St Kitts &amp; Nevis.png" />
+    <Content Include="img\flags\St Vincent &amp; the Grenadines.png" />
+    <Content Include="img\flags\Sudan.png" />
+    <Content Include="img\flags\Suriname.png" />
+    <Content Include="img\flags\Swaziland.png" />
+    <Content Include="img\flags\Sweden.png" />
+    <Content Include="img\flags\Switzerland.png" />
+    <Content Include="img\flags\Syria.png" />
+    <Content Include="img\flags\Tahiti%28French Polinesia%29.png" />
+    <Content Include="img\flags\Taiwan.png" />
+    <Content Include="img\flags\Tajikistan.png" />
+    <Content Include="img\flags\Tanzania.png" />
+    <Content Include="img\flags\Thailand.png" />
+    <Content Include="img\flags\Timor-Leste.png" />
+    <Content Include="img\flags\Togo.png" />
+    <Content Include="img\flags\Tonga.png" />
+    <Content Include="img\flags\Trinidad &amp; Tobago.png" />
+    <Content Include="img\flags\Tunisia.png" />
+    <Content Include="img\flags\Turkey.png" />
+    <Content Include="img\flags\Turkmenistan.png" />
+    <Content Include="img\flags\Turks and Caicos Islands.png" />
+    <Content Include="img\flags\Tuvalu.png" />
+    <Content Include="img\flags\Uganda.png" />
+    <Content Include="img\flags\Ukraine.png" />
+    <Content Include="img\flags\United Arab Emirates.png" />
+    <Content Include="img\flags\United Nations.png" />
+    <Content Include="img\flags\United-Kingdom.png" />
+    <Content Include="img\flags\Uruguay.png" />
+    <Content Include="img\flags\USA.png" />
+    <Content Include="img\flags\Uzbekistan.png" />
+    <Content Include="img\flags\Vanutau.png" />
+    <Content Include="img\flags\Vatican City.png" />
+    <Content Include="img\flags\Venezuela.png" />
+    <Content Include="img\flags\Viet Nam.png" />
+    <Content Include="img\flags\Virgin Islands British.png" />
+    <Content Include="img\flags\Virgin Islands US.png" />
+    <Content Include="img\flags\Wales.png" />
+    <Content Include="img\flags\Western Sahara.png" />
+    <Content Include="img\flags\Yemen.png" />
+    <Content Include="img\flags\Zambia.png" />
+    <Content Include="img\flags\Zimbabwe.png" />
+    <Content Include="img\logo-dark.png" />
+    <Content Include="img\logo-light.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\select.png" />
+    <Content Include="img\select2.png" />
+    <Content Include="img\select2x2.png" />
+    <Content Include="img\sort_asc.png" />
+    <Content Include="img\sort_asc_disabled.png" />
+    <Content Include="img\sort_both.png" />
+    <Content Include="img\sort_desc.png" />
+    <Content Include="img\sort_desc_disabled.png" />
+    <Content Include="img\sprite-skin-modern.png" />
+    <Content Include="js\app-options.js" />
+    <Content Include="js\app.js" />
+    <Content Include="js\libs\bootstrap.min.js" />
+    <Content Include="js\libs\Chart.min.js" />
+    <Content Include="js\libs\dataTables.bootstrap.min.js" />
+    <Content Include="js\libs\daterangepicker.js" />
+    <Content Include="js\libs\daterangepicker.min.js" />
+    <Content Include="js\libs\fullcalendar.min.js" />
+    <Content Include="js\libs\gauge.min.js" />
+    <Content Include="js\libs\gcal.js" />
+    <Content Include="js\libs\gcal.min.js" />
+    <Content Include="js\libs\ion.rangeSlider.min.js" />
+    <Content Include="js\libs\jquery.dataTables.min.js" />
+    <Content Include="js\libs\jquery.maskedinput.min.js" />
+    <Content Include="js\libs\jquery.min.js" />
+    <Content Include="js\libs\moment.min.js" />
+    <Content Include="js\libs\pace.min.js" />
+    <Content Include="js\libs\select2.min.js" />
+    <Content Include="js\libs\tether.min.js" />
+    <Content Include="js\libs\toastr.min.js" />
+    <Content Include="js\views\calendar.js" />
+    <Content Include="js\views\charts.js" />
+    <Content Include="js\views\forms.js" />
+    <Content Include="js\views\main.js" />
+    <Content Include="js\views\main2.js" />
+    <Content Include="js\views\notifications.js" />
+    <Content Include="js\views\shared.js" />
+    <Content Include="js\views\sliders.js" />
+    <Content Include="js\views\tables.js" />
+    <Content Include="js\views\widgets.js" />
+    <Content Include="login.aspx" />
+    <Content Include="Script\jquery-2.1.3.min.js" />
+    <Content Include="Showadmin.aspx" />
+    <Content Include="Showusers.aspx" />
+    <Content Include="TemplateFieldmaster.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BuisnessClass\clsCompany.cs" />
+    <Compile Include="BuisnessClass\clsCustom.cs" />
+    <Compile Include="BuisnessClass\clsRemarks.cs" />
+    <Compile Include="BuisnessClass\clsTask.cs" />
+    <Compile Include="BuisnessClass\DBConnection.cs" />
+    <Compile Include="BuisnessClass\clsRegistration.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="defaultUser.aspx.cs">
+      <DependentUpon>defaultUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="defaultUser.aspx.designer.cs">
+      <DependentUpon>defaultUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdminDashboard.aspx.cs">
+      <DependentUpon>FrmAdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmAdminDashboard.aspx.designer.cs">
+      <DependentUpon>FrmAdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminRemarks.aspx.cs">
+      <DependentUpon>frmAdminRemarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAdminRemarks.aspx.designer.cs">
+      <DependentUpon>frmAdminRemarks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmchangepassword.aspx.cs">
+      <DependentUpon>frmchangepassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmchangepassword.aspx.designer.cs">
+      <DependentUpon>frmchangepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCmpRegistration.aspx.cs">
+      <DependentUpon>frmCmpRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCmpRegistration.aspx.designer.cs">
+      <DependentUpon>frmCmpRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmforgotpswd.aspx.cs">
+      <DependentUpon>frmforgotpswd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmforgotpswd.aspx.designer.cs">
+      <DependentUpon>frmforgotpswd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserReport.aspx.cs">
+      <DependentUpon>frmUserReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmUserReport.aspx.designer.cs">
+      <DependentUpon>frmUserReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmprofile.aspx.cs">
+      <DependentUpon>frmprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmprofile.aspx.designer.cs">
+      <DependentUpon>frmprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmTaskReport.aspx.cs">
+      <DependentUpon>frmTaskReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmTaskReport.aspx.designer.cs">
+      <DependentUpon>frmTaskReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmUSerRemarks.aspx.cs">
+      <DependentUpon>frmUSerRemarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmUSerRemarks.aspx.designer.cs">
+      <DependentUpon>frmUSerRemarks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmTaskAsignMaster.aspx.cs">
+      <DependentUpon>frmTaskAsignMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmTaskAsignMaster.aspx.designer.cs">
+      <DependentUpon>frmTaskAsignMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmTemplateMaster.aspx.cs">
+      <DependentUpon>frmTemplateMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmTemplateMaster.aspx.designer.cs">
+      <DependentUpon>frmTemplateMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserDashboard.aspx.cs">
+      <DependentUpon>frmUserDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmUserDashboard.aspx.designer.cs">
+      <DependentUpon>frmUserDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserprofile.aspx.cs">
+      <DependentUpon>frmUserprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmUserprofile.aspx.designer.cs">
+      <DependentUpon>frmUserprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCmpReport.aspx.cs">
+      <DependentUpon>frmCmpReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCmpReport.aspx.designer.cs">
+      <DependentUpon>frmCmpReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserStatusReport.aspx.cs">
+      <DependentUpon>frmUserStatusReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmUserStatusReport.aspx.designer.cs">
+      <DependentUpon>frmUserStatusReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistration.aspx.cs">
+      <DependentUpon>frmRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmRegistration.aspx.designer.cs">
+      <DependentUpon>frmRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmRoleMaster.aspx.cs">
+      <DependentUpon>frmRoleMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmRoleMaster.aspx.designer.cs">
+      <DependentUpon>frmRoleMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmStatusMaster.aspx.cs">
+      <DependentUpon>frmStatusMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmStatusMaster.aspx.designer.cs">
+      <DependentUpon>frmStatusMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmTaskMaster.aspx.cs">
+      <DependentUpon>frmTaskMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmTaskMaster.aspx.designer.cs">
+      <DependentUpon>frmTaskMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Showadmin.aspx.cs">
+      <DependentUpon>Showadmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Showadmin.aspx.designer.cs">
+      <DependentUpon>Showadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Showusers.aspx.cs">
+      <DependentUpon>Showusers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Showusers.aspx.designer.cs">
+      <DependentUpon>Showusers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateFieldmaster.aspx.cs">
+      <DependentUpon>TemplateFieldmaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateFieldmaster.aspx.designer.cs">
+      <DependentUpon>TemplateFieldmaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CompanyDocument\" />
+    <Folder Include="FileUpload\" />
+    <Folder Include="TaskDocument\" />
+    <Folder Include="TaskRemarksDoc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\style.css.map" />
+    <Content Include="js\libs\jquery.min.map" />
+    <Content Include="js\libs\toastr.js.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\Simple-Line-Icons.eot" />
+    <Content Include="fonts\Simple-Line-Icons.ttf" />
+    <Content Include="fonts\Simple-Line-Icons.woff" />
+    <Content Include="fonts\Simple-Line-Icons.woff2" />
+    <Content Include="img\logo.psd" />
+    <Content Include="img\Sorting icons.psd" />
+    <Content Include="Admin.Master" />
+    <Content Include="User.Master" />
+    <None Include="Properties\PublishProfiles\dms.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49807/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

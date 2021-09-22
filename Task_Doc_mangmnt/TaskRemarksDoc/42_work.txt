@@ -1,0 +1,16 @@
+Query:
+Registration profile
+task report(Username,Clear,Search)
+forgot password
+table data(task,company)
+validation
+Remarks(NOt started,multiple document add)
+company document
+
+
+Work:
+BMC canvas:28 march
+BMC report:Hardcopy 28 march
+Project report:Softcopy 28 march
+Poster :28 march
+presentation:10 march
